@@ -7,6 +7,27 @@
 
   <title>Portfolio Al Farras</title>
 
+  .sidebar{
+  position:fixed;
+  left:-220px;
+  top:0;
+  width:220px;
+  height:100%;
+  background:#111827;
+  padding-top:80px;
+  transition:0.3s;
+}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:15px 30px;
+}
+
+.sidebar a:hover{
+  background:#38bdf8;
+}
   <style>
 
     *{
@@ -52,6 +73,22 @@
 
 </head>
 
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.onclick = function(){
+
+  if(sidebar.style.left == "0px"){
+    sidebar.style.left = "-220px";
+  }else{
+    sidebar.style.left = "0px";
+  }
+
+}
+
+</script>
 <body>
 
   <div class="menu-btn">
@@ -75,3 +112,5 @@
   <p>
     Saya tertarik pada dunia finance dan teknologi.
   </p>
+
+  </section>
