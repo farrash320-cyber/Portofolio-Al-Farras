@@ -128,14 +128,18 @@ p{
 const menuBtn = document.querySelector(".menu-btn");
 const sidebar = document.querySelector(".sidebar");
 
-sidebar.style.left = "-220px";
+let isOpen = false;
 
 menuBtn.onclick = function(){
 
-  if(sidebar.style.left == "0px"){
+  if(isOpen){
+
     sidebar.style.left = "-220px";
+    isOpen = false;
+    
   }else{
-    sidebar.style.left = "0px";
+    sidebar.style.left = "0";
+    isOpen = true;
   }
 }
 
