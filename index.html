@@ -58,8 +58,6 @@ body{
   cursor:pointer;
 
   z-index:99999;
-
-  pointer-events:auto;
 }
 
 /* SIDEBAR */
@@ -118,9 +116,9 @@ p{
 
 <!-- TOMBOL MENU -->
 
-<div class="menu-btn">
+<button class="menu-btn">
 ☰
-</div>
+</button>
 
 <!-- SIDEBAR -->
 
@@ -143,7 +141,7 @@ p{
   <p>
     Finance Analyst | Tech Enthusiast
   </p>
-     
+
 <script>
 
 const menuBtn = document.querySelector(".menu-btn");
@@ -151,17 +149,21 @@ const sidebar = document.querySelector(".sidebar");
 
 let isOpen = false;
 
-menuBtn.onclick = function(){
+menuBtn.addEventListener("click", function(){
 
   if(isOpen){
 
     sidebar.style.left = "-220px";
     isOpen = false;
-    
+
   }else{
+
     sidebar.style.left = "0";
     isOpen = true;
+
   }
+
+});
 
 </script>
 
