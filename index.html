@@ -243,6 +243,15 @@ p{
     transform:translateY(0);
   }
 }
+
+.sidebar a.active{
+
+  background:rgba(59,130,246,0.2);
+
+  box-shadow:0 0 20px rgba(59,130,246,0.5);
+
+  color:white;
+}
   
 </style>
 
@@ -262,17 +271,17 @@ p{
 
 <nav class="sidebar">
 
-<a href="index.html">
+<a href="index.html" class="active">
 <i class="fas fa-home"></i>
 Home
 </a>
 
-<a href="about.html">
+<a href="about.html" class="active">
 <i class="fas fa-user"></i>
 About Me
 </a>
 
-<a href="contact.html">
+<a href="contact.html" class="active">
 <i class="fas fa-envelope"></i>
 Contact
 </a>
