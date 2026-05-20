@@ -309,6 +309,90 @@ p{
 
   transform:scale(1.05);
 }
+
+#dashboard{
+
+  height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:rgba(0,0,0,0.85);
+
+  backdrop-filter:blur(10px);
+}
+
+.dashboard-box{
+
+  width:80%;
+
+  max-width:900px;
+
+  padding:40px;
+
+  border-radius:25px;
+
+  background:rgba(255,255,255,0.05);
+
+  box-shadow:0 0 30px rgba(59,130,246,0.3);
+
+  color:white;
+
+  text-align:center;
+}
+
+.cards{
+
+  display:flex;
+
+  gap:20px;
+
+  justify-content:center;
+
+  margin-top:30px;
+
+  flex-wrap:wrap;
+}
+
+.card{
+
+  background:rgba(255,255,255,0.08);
+
+  padding:30px;
+
+  border-radius:20px;
+
+  width:200px;
+
+  transition:0.3s;
+}
+
+.card:hover{
+
+  transform:translateY(-10px);
+
+  background:rgba(59,130,246,0.2);
+}
+
+.logout-btn{
+
+  margin-top:30px;
+
+  padding:12px 30px;
+
+  border:none;
+
+  border-radius:15px;
+
+  background:#ef4444;
+
+  color:white;
+
+  cursor:pointer;
+}
   
 </style>
 
@@ -426,7 +510,9 @@ function login(){
 
   if(username === "admin" && password === "12345"){
 
-    alert("Login Berhasil 😎🔥");
+  document.getElementById("home").style.display = "none";
+
+document.getElementById("dashboard").style.display = "flex";
 
   }else{
 
@@ -434,8 +520,6 @@ function login(){
   }
 }
 
-</div>
-  
 </header>
 
 <section id="dashboard" style="display:none;">
@@ -474,6 +558,13 @@ Logout
 </section>
 
 <script>
+
+function logout(){
+
+  document.getElementById("dashboard").style.display = "none";
+
+  document.getElementById("home").style.display = "flex";
+}
   
 </script>
 
