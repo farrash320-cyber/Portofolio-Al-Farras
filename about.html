@@ -10,6 +10,12 @@
 
 <style>
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
 
   background-image:url("Areas-Bangkok.jpg");
@@ -18,7 +24,7 @@ body{
 
   background-position:center;
 
-  background-color:rgba(0,0,0,0.5);
+  background-color:rgba(0,0,0,0.6);
 
   background-blend-mode:darken;
 
@@ -29,18 +35,114 @@ body{
   padding:50px;
 }
 
+/* BACK BUTTON */
+
+.back-btn{
+
+  display:inline-block;
+
+  margin-bottom:40px;
+
+  color:#38bdf8;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  transition:0.3s;
+}
+
+.back-btn:hover{
+
+  transform:translateX(-5px);
+
+  color:#7dd3fc;
+}
+
+/* CONTAINER */
+
+.container{
+
+  max-width:900px;
+
+  margin:auto;
+
+  background:rgba(255,255,255,0.05);
+
+  padding:40px;
+
+  border-radius:25px;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+
 h1{
+
   font-size:50px;
+
+  margin-bottom:30px;
+
+  text-align:center;
+}
+
+h2{
+
+  font-size:32px;
+
+  margin-top:40px;
+
   margin-bottom:20px;
+
+  color:#38bdf8;
+}
+
+h3{
+
+  font-size:24px;
+
+  margin-top:25px;
+
+  margin-bottom:10px;
 }
 
 p{
-  font-size:22px;
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  color:#e5e7eb;
 }
 
-a{
-  color:#38bdf8;
-  text-decoration:none;
+/* EDUCATION */
+
+.education{
+
+  margin-bottom:20px;
+
+  line-height:1.8;
+}
+
+/* LIST */
+
+ul{
+
+  margin-top:15px;
+
+  margin-left:25px;
+}
+
+li{
+
+  margin-bottom:10px;
+
+  line-height:1.7;
+
+  color:#e5e7eb;
 }
 
 </style>
@@ -49,26 +151,32 @@ a{
 
 <body>
 
-<a href="index.html">
+<a href="index.html" class="back-btn">
 ← Kembali ke Home
 </a>
 
+<div class="container">
+
 <h1>About Me</h1>
-<br><br>
 
 <h2>Education</h2>
+
+<div class="education">
+
+<p>
+Pertiwi High School <br>
+Social Science <br>
+2016 - 2019
+</p>
+
 <br>
 
-Pertiwi High School
-Social Science
-<br>
-2016-2019
-<br><br>
+<p>
+Hang Tuah Junior High School <br>
+2013 - 2016
+</p>
 
-Hang Tuah Junior High School
-<br>
-2013-2016
-<br><br>
+</div>
 
 <h2>Employment History</h2>
 
@@ -76,20 +184,24 @@ Hang Tuah Junior High School
 Finance | Online Service Company
 </h3>
 
-<p>Mei 2026 - Present
+<p>
+May 2026 - Present
 </p>
 
 <ul>
+
+<li>
 Handled financial data entry and reporting activities, including invoice processing, expense tracking, bank reconciliation, and administrative finance support.
+</li>
+
 </ul>
-  
-  
+
 <h3>
 Customer Service Representative | Online Service Company
 </h3>
 
 <p>
-March 2025 - Mei 2026
+March 2025 - May 2026
 </p>
 
 <ul>
@@ -106,8 +218,6 @@ March 2025 - Mei 2026
 
 </ul>
 
-<br>
-
 <h3>
 Personal Assistant | PT Dextonindo Persada
 </h3>
@@ -120,8 +230,6 @@ July 2022 - January 2025
 A Personal Assistant provides administrative and organizational support to an individual or executive. Responsibilities include managing schedules, arranging meetings, handling communication, organizing travel, and assisting with daily tasks.
 </p>
 
-<br>
-
 <h3>
 Entry Data | Yayasan Perguruan Al-Fattah Medan
 </h3>
@@ -133,6 +241,8 @@ October 2020 - July 2022
 <p>
 Experienced in data entry and administrative tasks, including data input, data cleaning, and file organization. Able to handle repetitive tasks with high accuracy and efficiency.
 </p>
+
+</div>
 
 <script>
 
