@@ -261,6 +261,34 @@ p{
 
   color:white;
 }
+
+.login-btn{
+
+  margin-top:20px;
+
+  padding:12px 30px;
+
+  border:none;
+
+  border-radius:15px;
+
+  background:#3b82f6;
+
+  color:white;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.login-btn:hover{
+
+  background:#2563eb;
+
+  transform:scale(1.05);
+}
   
 </style>
 
@@ -306,6 +334,13 @@ Contact
   <h1>Halo, Saya Al Farras 👋</h1>
 
 <p id="typing"></p>
+
+<button onclick="login()" class="login-btn">
+
+Login
+
+</button>
+  
   <div class="socials">
 
 <a href="https://instagram.com/username">
@@ -360,9 +395,21 @@ menuBtn.addEventListener("click", function(){
     sidebar.style.left = "0";
     isOpen = true;
 
-  }
+function login(){
 
-});
+  let username = prompt("Masukkan Username");
+
+  let password = prompt("Masukkan Password");
+
+  if(username === "admin" && password === "12345"){
+
+    alert("Login Berhasil 😎🔥");
+
+  }else{
+
+    alert("Username atau Password Salah 😭");
+  }
+}
 
 </script>
 
