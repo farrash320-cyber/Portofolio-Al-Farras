@@ -145,15 +145,103 @@ li{
   color:#e5e7eb;
 }
 
+.menu-btn{
+
+  position:fixed;
+
+  top:20px;
+
+  left:20px;
+
+  width:55px;
+
+  height:55px;
+
+  border-radius:18px;
+
+  background:rgba(0,0,0,0.7);
+
+  color:white;
+
+  font-size:24px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  cursor:pointer;
+
+  z-index:9999;
+}
+
+.sidebar{
+
+  position:fixed;
+
+  top:0;
+
+  left:-220px;
+
+  width:220px;
+
+  height:100%;
+
+  background:rgba(10,15,30,0.95);
+
+  padding-top:100px;
+
+  transition:0.4s;
+}
+
+.sidebar a{
+
+  display:block;
+
+  padding:18px 25px;
+
+  margin:15px;
+
+  border-radius:15px;
+
+  text-decoration:none;
+
+  color:white;
+
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+
+  background:rgba(59,130,246,0.2);
+}
+  
 </style>
 
 </head>
 
 <body>
 
-<a href="index.html" class="back-btn">
-← Kembali ke Home
+<div class="menu-btn">
+☰
+</div>
+
+<nav class="sidebar">
+
+<a href="index.html">
+Home
 </a>
+
+<a href="about.html">
+About Me
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
 
 <div class="container">
 
@@ -254,6 +342,33 @@ if (performance.navigation.type === 1) {
 
 </script>
 
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+
+const sidebar = document.querySelector(".sidebar");
+
+let isOpen = false;
+
+menuBtn.addEventListener("click", function(){
+
+  if(isOpen){
+
+    sidebar.style.left = "-220px";
+
+    isOpen = false;
+
+  }else{
+
+    sidebar.style.left = "0";
+
+    isOpen = true;
+  }
+
+});
+
+</script>
+  
 </body>
 
 </html>
