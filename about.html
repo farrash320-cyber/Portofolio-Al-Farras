@@ -34,8 +34,6 @@ body{
   color:white;
 
   font-family:Arial,sans-serif;
-
-  padding:50px;
 }
 
 /* MENU BUTTON */
@@ -92,6 +90,8 @@ body{
   padding-top:100px;
 
   transition:0.4s;
+
+  z-index:999;
 }
 
 .sidebar a{
@@ -131,46 +131,47 @@ body{
 
 .container{
 
-  max-width:1000px;
+  width:100%;
 
-  margin:auto;
+  padding:100px 50px;
+}
+
+/* TITLE */
+
+.main-title{
+
+  text-align:center;
+
+  font-size:60px;
+
+  margin-bottom:60px;
+}
+
+.section-title{
+
+  font-size:40px;
+
+  color:#38bdf8;
+
+  margin-bottom:40px;
+}
+
+/* EDUCATION */
+
+.education-box{
 
   background:rgba(255,255,255,0.05);
 
-  padding:40px;
+  padding:35px;
 
   border-radius:25px;
 
   backdrop-filter:blur(10px);
 
-  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  margin-bottom:60px;
 }
 
-/* TITLE */
-
-h1{
-
-  font-size:50px;
-
-  margin-bottom:40px;
-
-  text-align:center;
-}
-
-h2{
-
-  font-size:35px;
-
-  margin-top:40px;
-
-  margin-bottom:25px;
-
-  color:#38bdf8;
-}
-
-/* EDUCATION */
-
-.education{
+.education-box p{
 
   line-height:2;
 
@@ -179,91 +180,77 @@ h2{
   color:#e5e7eb;
 }
 
-/* TIMELINE */
+/* CAREER SECTION */
 
-.timeline{
+.career-card{
+
+  min-height:100vh;
 
   display:flex;
 
-  gap:25px;
+  justify-content:center;
 
-  overflow-x:auto;
+  align-items:center;
 
-  padding-bottom:20px;
-
-  margin-top:30px;
-
-  scroll-behavior:smooth;
+  margin-bottom:50px;
 }
 
-.timeline::-webkit-scrollbar{
+.career-content{
 
-  height:8px;
-}
+  width:100%;
 
-.timeline::-webkit-scrollbar-thumb{
-
-  background:#38bdf8;
-
-  border-radius:20px;
-}
-
-.timeline-card{
-
-  min-width:320px;
+  max-width:900px;
 
   background:rgba(255,255,255,0.05);
 
-  padding:25px;
+  padding:50px;
 
-  border-radius:20px;
+  border-radius:30px;
 
   backdrop-filter:blur(10px);
 
-  transition:0.3s;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
 
-  flex-shrink:0;
+  transition:0.4s;
 }
 
-.timeline-card:hover{
+.career-content:hover{
 
   transform:translateY(-10px);
 
-  background:rgba(59,130,246,0.15);
+  background:rgba(59,130,246,0.12);
 }
 
-.timeline-card h3{
+.career-content h3{
+
+  font-size:45px;
 
   color:#38bdf8;
 
-  margin-bottom:10px;
+  margin-bottom:15px;
+}
+
+.career-content h4{
 
   font-size:28px;
+
+  margin-bottom:15px;
 }
 
-.timeline-card h4{
-
-  margin-bottom:12px;
-
-  color:white;
-
-  font-size:20px;
-}
-
-.timeline-card .date{
+.date{
 
   color:#d1d5db;
 
-  margin-bottom:15px;
+  margin-bottom:20px;
 
-  font-size:15px;
+  font-size:18px;
 }
 
-.timeline-card p{
+.career-content p{
 
-  font-size:16px;
+  font-size:19px;
 
-  line-height:1.8;
+  line-height:2;
 
   color:#e5e7eb;
 }
@@ -316,15 +303,19 @@ Contact
 
 </nav>
 
-<!-- CONTAINER -->
+<!-- CONTENT -->
 
 <div class="container">
 
-<h1>About Me</h1>
+<h1 class="main-title">
+About Me
+</h1>
 
-<h2>Education</h2>
+<h2 class="section-title">
+Education
+</h2>
 
-<div class="education">
+<div class="education-box">
 
 <p>
 Pertiwi High School <br>
@@ -341,11 +332,15 @@ Hang Tuah Junior High School <br>
 
 </div>
 
-<h2>Employment Journey</h2>
+<h2 class="section-title">
+Employment Journey
+</h2>
 
-<section class="career-section">
+<!-- FINANCE -->
 
-<div class="career-card">
+<section class="career-card">
+
+<div class="career-content">
 
 <h3>Finance</h3>
 
@@ -356,14 +351,22 @@ May 2026 - Present
 </p>
 
 <p>
+
 Handled financial reporting, invoice processing,
 expense tracking, bank reconciliation,
 and finance administrative support.
+
 </p>
 
 </div>
 
-<div class="career-card">
+</section>
+
+<!-- CUSTOMER SERVICE -->
+
+<section class="career-card">
+
+<div class="career-content">
 
 <h3>Customer Service</h3>
 
@@ -374,14 +377,22 @@ March 2025 - May 2026
 </p>
 
 <p>
+
 Handled customer inquiries, complaints,
 transaction issues, and customer satisfaction
 in fast-paced environment.
+
 </p>
 
 </div>
 
-<div class="career-card">
+</section>
+
+<!-- PERSONAL ASSISTANT -->
+
+<section class="career-card">
+
+<div class="career-content">
 
 <h3>Personal Assistant</h3>
 
@@ -392,14 +403,22 @@ July 2022 - January 2025
 </p>
 
 <p>
+
 Managed schedules, meetings,
 communications, travel arrangements,
 and executive administrative tasks.
+
 </p>
 
 </div>
 
-<div class="career-card">
+</section>
+
+<!-- ENTRY DATA -->
+
+<section class="career-card">
+
+<div class="career-content">
 
 <h3>Entry Data</h3>
 
@@ -410,14 +429,20 @@ October 2020 - July 2022
 </p>
 
 <p>
+
 Handled data entry, data cleaning,
 file organization, and repetitive administrative
 tasks with high accuracy.
+
 </p>
 
 </div>
 
 </section>
+
+</div>
+
+<!-- FOOTER -->
 
 <footer>
 
