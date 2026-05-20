@@ -10,6 +10,9 @@
 
 <style>
 
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 *{
   margin:0;
   padding:0;
@@ -212,6 +215,12 @@ li{
   color:white;
 
   transition:0.3s;
+
+  display:flex;
+  
+  align-items:center;
+
+gap:15px;
 }
 
 .sidebar a.active{
@@ -239,14 +248,17 @@ li{
 <nav class="sidebar">
 
 <a href="index.html">
+<i class="fas fa-home"></i>
 Home
 </a>
 
 <a href="about.html" class="active">
+<i class="fas fa-user"></i>
 About Me
 </a>
 
 <a href="contact.html">
+<i class="fas fa-envelope"></i>
 Contact
 </a>
 
