@@ -34,6 +34,8 @@ body{
   color:white;
 
   font-family:Arial,sans-serif;
+
+  overflow-x:hidden;
 }
 
 /* MENU BUTTON */
@@ -127,7 +129,7 @@ body{
   background:rgba(59,130,246,0.2);
 }
 
-/* CONTAINER */
+/* MAIN */
 
 .container{
 
@@ -149,110 +151,186 @@ body{
 
 .section-title{
 
+  text-align:center;
+
   font-size:40px;
 
   color:#38bdf8;
 
-  margin-bottom:40px;
+  margin-bottom:60px;
 }
 
 /* EDUCATION */
 
-.education-box{
+.education{
+
+  max-width:900px;
+
+  margin:auto;
 
   background:rgba(255,255,255,0.05);
 
-  padding:35px;
+  padding:40px;
 
   border-radius:25px;
 
   backdrop-filter:blur(10px);
 
-  margin-bottom:60px;
+  margin-bottom:80px;
 }
 
-.education-box p{
-
-  line-height:2;
+.education p{
 
   font-size:20px;
+
+  line-height:2;
 
   color:#e5e7eb;
 }
 
-/* CAREER SECTION */
+/* TIMELINE */
 
-.career-card{
+.timeline{
 
-  min-height:100vh;
+  position:relative;
 
-  display:flex;
+  max-width:1200px;
 
-  justify-content:center;
-
-  align-items:center;
-
-  margin-bottom:50px;
+  margin:auto;
 }
 
-.career-content{
+/* GARIS TENGAH */
 
-  width:100%;
+.timeline::after{
 
-  max-width:900px;
+  content:"";
+
+  position:absolute;
+
+  width:4px;
+
+  background:#38bdf8;
+
+  top:0;
+
+  bottom:0;
+
+  left:50%;
+
+  margin-left:-2px;
+}
+
+/* ITEM */
+
+.timeline-item{
+
+  padding:20px 40px;
+
+  position:relative;
+
+  width:50%;
+}
+
+/* BULATAN */
+
+.timeline-item::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:20px;
+
+  height:20px;
+
+  right:-10px;
+
+  background:#38bdf8;
+
+  border:4px solid white;
+
+  top:50px;
+
+  border-radius:50%;
+
+  z-index:1;
+}
+
+/* LEFT */
+
+.left{
+
+  left:0;
+}
+
+/* RIGHT */
+
+.right{
+
+  left:50%;
+}
+
+.right::after{
+
+  left:-10px;
+}
+
+/* CONTENT */
+
+.timeline-content{
 
   background:rgba(255,255,255,0.05);
 
-  padding:50px;
+  padding:30px;
 
-  border-radius:30px;
+  border-radius:25px;
 
   backdrop-filter:blur(10px);
 
-  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  transition:0.3s;
 
-  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
 
-.career-content:hover{
+.timeline-content:hover{
 
   transform:translateY(-10px);
 
   background:rgba(59,130,246,0.12);
 }
 
-.career-content h3{
-
-  font-size:45px;
+.timeline-content h3{
 
   color:#38bdf8;
 
-  margin-bottom:15px;
+  font-size:38px;
+
+  margin-bottom:10px;
 }
 
-.career-content h4{
+.timeline-content h4{
 
-  font-size:28px;
+  font-size:25px;
 
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
-.date{
+.company{
 
-  color:#d1d5db;
+  color:white;
 
-  margin-bottom:20px;
+  margin-bottom:15px;
 
   font-size:18px;
 }
 
-.career-content p{
+.desc{
 
-  font-size:19px;
+  color:#d1d5db;
 
-  line-height:2;
+  line-height:1.8;
 
-  color:#e5e7eb;
+  font-size:16px;
 }
 
 /* FOOTER */
@@ -265,9 +343,44 @@ footer{
 
   font-size:16px;
 
-  margin-top:40px;
+  margin-top:80px;
 
   margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:768px){
+
+.timeline::after{
+
+  left:20px;
+}
+
+.timeline-item{
+
+  width:100%;
+
+  padding-left:70px;
+
+  padding-right:20px;
+}
+
+.timeline-item::after{
+
+  left:10px;
+}
+
+.right{
+
+  left:0;
+}
+
+.main-title{
+
+  font-size:45px;
+}
+
 }
 
 </style>
@@ -303,7 +416,7 @@ Contact
 
 </nav>
 
-<!-- CONTENT -->
+<!-- MAIN -->
 
 <div class="container">
 
@@ -315,7 +428,7 @@ About Me
 Education
 </h2>
 
-<div class="education-box">
+<div class="education">
 
 <p>
 Pertiwi High School <br>
@@ -336,21 +449,25 @@ Hang Tuah Junior High School <br>
 Employment Journey
 </h2>
 
+<!-- TIMELINE -->
+
+<div class="timeline">
+
 <!-- FINANCE -->
 
-<section class="career-card">
+<div class="timeline-item left">
 
-<div class="career-content">
+<div class="timeline-content">
 
-<h3>Finance</h3>
+<h3>2026</h3>
 
-<h4>Online Service Company</h4>
+<h4>Finance</h4>
 
-<p class="date">
-May 2026 - Present
+<p class="company">
+Online Service Company
 </p>
 
-<p>
+<p class="desc">
 
 Handled financial reporting, invoice processing,
 expense tracking, bank reconciliation,
@@ -360,23 +477,23 @@ and finance administrative support.
 
 </div>
 
-</section>
+</div>
 
 <!-- CUSTOMER SERVICE -->
 
-<section class="career-card">
+<div class="timeline-item right">
 
-<div class="career-content">
+<div class="timeline-content">
 
-<h3>Customer Service</h3>
+<h3>2025</h3>
 
-<h4>Online Service Company</h4>
+<h4>Customer Service</h4>
 
-<p class="date">
-March 2025 - May 2026
+<p class="company">
+Online Service Company
 </p>
 
-<p>
+<p class="desc">
 
 Handled customer inquiries, complaints,
 transaction issues, and customer satisfaction
@@ -386,23 +503,23 @@ in fast-paced environment.
 
 </div>
 
-</section>
+</div>
 
 <!-- PERSONAL ASSISTANT -->
 
-<section class="career-card">
+<div class="timeline-item left">
 
-<div class="career-content">
+<div class="timeline-content">
 
-<h3>Personal Assistant</h3>
+<h3>2022</h3>
 
-<h4>PT Dextonindo Persada</h4>
+<h4>Personal Assistant</h4>
 
-<p class="date">
-July 2022 - January 2025
+<p class="company">
+PT Dextonindo Persada
 </p>
 
-<p>
+<p class="desc">
 
 Managed schedules, meetings,
 communications, travel arrangements,
@@ -412,23 +529,23 @@ and executive administrative tasks.
 
 </div>
 
-</section>
+</div>
 
 <!-- ENTRY DATA -->
 
-<section class="career-card">
+<div class="timeline-item right">
 
-<div class="career-content">
+<div class="timeline-content">
 
-<h3>Entry Data</h3>
+<h3>2020</h3>
 
-<h4>Yayasan Perguruan Al-Fattah</h4>
+<h4>Entry Data</h4>
 
-<p class="date">
-October 2020 - July 2022
+<p class="company">
+Yayasan Perguruan Al-Fattah
 </p>
 
-<p>
+<p class="desc">
 
 Handled data entry, data cleaning,
 file organization, and repetitive administrative
@@ -438,7 +555,9 @@ tasks with high accuracy.
 
 </div>
 
-</section>
+</div>
+
+</div>
 
 </div>
 
