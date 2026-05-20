@@ -136,10 +136,11 @@ Experienced in data entry and administrative tasks, including data input, data c
 
 <script>
 
-window.onbeforeunload = function () {
+if (performance.navigation.type === 1) {
 
   window.location.href = "index.html";
-};
+
+}
 
 </script>
 
