@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  background-image:url("Areas-Bangkok.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-color:rgba(0,0,0,0.6);
+
+  background-blend-mode:darken;
+
+  color:white;
+
+  font-family:Arial,sans-serif;
+
+  padding:50px;
+}
+
+/* CONTAINER */
+
+.container{
+
+  max-width:900px;
+
+  margin:auto;
+
+  background:rgba(255,255,255,0.05);
+
+  padding:40px;
+
+  border-radius:25px;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+
+h1{
+
+  font-size:50px;
+
+  margin-bottom:30px;
+
+  text-align:center;
+}
+
+.contact-box{
+
+  margin-top:30px;
+}
+
+.contact-item{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  margin-bottom:25px;
+
+  padding:20px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.05);
+
+  transition:0.3s;
+}
+
+.contact-item:hover{
+
+  background:rgba(59,130,246,0.15);
+
+  transform:translateX(8px);
+}
+
+.contact-item i{
+
+  font-size:24px;
+
+  color:#38bdf8;
+
+  width:35px;
+}
+
+.contact-item p{
+
+  font-size:18px;
+
+  color:#e5e7eb;
+}
+
+.contact-item a{
+
+  color:#e5e7eb;
+
+  text-decoration:none;
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+
+  position:fixed;
+
+  top:20px;
+
+  left:20px;
+
+  width:55px;
+
+  height:55px;
+
+  border-radius:18px;
+
+  background:rgba(0,0,0,0.7);
+
+  color:white;
+
+  font-size:24px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  cursor:pointer;
+
+  z-index:9999;
+
+  box-shadow:0 0 15px rgba(59,130,246,0.5);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+  position:fixed;
+
+  top:0;
+
+  left:-220px;
+
+  width:220px;
+
+  height:100%;
+
+  background:rgba(10,15,30,0.95);
+
+  padding-top:100px;
+
+  transition:0.4s;
+}
+
+.sidebar a{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  padding:18px 25px;
+
+  margin:15px;
+
+  border-radius:15px;
+
+  text-decoration:none;
+
+  color:white;
+
+  transition:0.3s;
+}
+
+.sidebar a.active{
+
+  background:rgba(59,130,246,0.25);
+
+  color:#38bdf8;
+}
+
+.sidebar a:hover{
+
+  background:rgba(59,130,246,0.2);
+}
+
+/* FOOTER */
+
+footer{
+
+  margin-top:50px;
+
+  text-align:center;
+
+  color:#d1d5db;
+
+  font-size:16px;
+
+  padding:20px;
+
+  background:rgba(255,255,255,0.05);
+
+  border-radius:15px;
+
+  backdrop-filter:blur(10px);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+
+<div class="menu-btn">
+☰
+</div>
+
+<!-- SIDEBAR -->
+
+<nav class="sidebar">
+
+<a href="index.html">
+<i class="fas fa-home"></i>
+Home
+</a>
+
+<a href="about.html">
+<i class="fas fa-user"></i>
+About Me
+</a>
+
+<a href="contact.html" class="active">
+<i class="fas fa-envelope"></i>
+Contact
+</a>
+
+</nav>
+
+<!-- CONTAINER -->
+
+<div class="container">
+
+<h1>Contact Me</h1>
+
+<div class="contact-box">
+
+<div class="contact-item">
+
+<i class="fab fa-instagram"></i>
+
+<p>
+Instagram : Tunggu yah 😆🔥
+</p>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fas fa-envelope"></i>
+
+<p>
+Email : farras737@gmail.com
+</p>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fas fa-phone"></i>
+
+<p>
+Phone Number : +62 821-6060-3341
+</p>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fab fa-linkedin"></i>
+
+<p>
+LinkedIn : Coming Soon 😎🔥
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Al Farras Portfolio
+
+</footer>
+
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+
+const sidebar = document.querySelector(".sidebar");
+
+let isOpen = false;
+
+menuBtn.addEventListener("click", function(){
+
+  if(isOpen){
+
+    sidebar.style.left = "-220px";
+
+    isOpen = false;
+
+  }else{
+
+    sidebar.style.left = "0";
+
+    isOpen = true;
+  }
+
+});
+
+</script>
+
+</body>
+
+</html>
